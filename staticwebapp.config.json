@@ -1,1 +1,10 @@
+{
+  "routes": [
+    {
+      "route": "/{id}",
+      "serve": "/index.html",
+      "statusCode": 200
+    }
+  ]
+}
 
