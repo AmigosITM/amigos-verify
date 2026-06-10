@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Certification Verification</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
 
+<h2>Certification Verification</h2>
+<div id="content">Loading...</div>
+
+<script>
+const data = {
+  "12345": {
+    name: "John Smith",
+    company: "GYC",
+    status: "Active",
+    link: "PASTE_YOUR_SHAREPOINT_LINK"
+  }
+};
+
+const id = window.location.pathname.replace("/", "");
+const emp = data[id];
+
+if(!emp){
+  document.getElementById("content").innerHTML = "Verification Not Found";
+} else {
+  document.getElementById("content").innerHTML = `
+    <p><strong>${emp.name}</strong></p>
+    <p>${emp.company}</p>
+    <p>Status: ${emp.status}</p>
+    <a href="${emp.link}" target="_blank">View Certifications</a>
+  `;
+}
+</script>
+
+</body>
+</html>
